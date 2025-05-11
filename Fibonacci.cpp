@@ -1,21 +1,23 @@
 #include <iostream>
 using namespace std;
 
+int fibonacci(int n)
+{
+    if (n <= 1)
+        return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
 int main()
 {
-    int n;
 
-    cin >> n;
+    int num;
 
-    int a = 0, b = 1;
+    cin >> num;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < num; i++)
     {
-        cout << a << " ";
-
-        int next = a + b;
-        a = b;
-        b = next;
+        cout << fibonacci(i) << " ";
     }
 
     return 0;
