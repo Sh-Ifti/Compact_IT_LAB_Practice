@@ -1,18 +1,20 @@
 #include <iostream>
 using namespace std;
 
+int factorial(int n)
+{
+    if (n == 0)
+        return 1;
+    else
+        return (n * factorial(n - 1));
+}
+
 int main()
 {
-    int num, fact = 1;
+    int num;
 
     cin >> num;
 
-    for (int i = 1; i <= num; i++)
-    {
-        fact = fact * i;
-    }
-
-    cout << fact;
-
+    cout << num << "! = " << factorial(num);
     return 0;
 }
